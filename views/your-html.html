@@ -1,0 +1,364 @@
+<style>
+  @media screen and (min-width: 768px) and (min-width: 800px) {
+    .main-container {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none;
+    }
+  }
+
+  .app-wrapper {
+    background: #ffa4c5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0px;
+  }
+
+  .app {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 60px;
+    position: relative;
+    background: #ff72a4;
+    padding: 8%;
+  }
+
+  .app button {
+    background: #ffd800;
+    color: #ff72a4;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 60px;
+    -webkit-appearance: none;
+    border: none;
+  }
+
+  .question {
+    position: relative;
+  }
+
+  .question h2 {
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    line-height: 1.45;
+  }
+
+  .question li {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .question img {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    right: 0;
+  }
+
+  .app:nth-child(even) img {
+    top: 0;
+    left: 0;
+  }
+
+  .app:nth-child(odd) img {
+    top: 0;
+    right: 0;
+  }
+
+
+  /* .question img:nth-of-type(2n) {
+    top: 0;
+    right: 0;
+  } */
+
+  .question li:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  .reveal {
+    background: #ff72a4;
+    max-width: 700px;
+    padding: 20px 20px;
+    color: #ffd800;
+    border-radius: 0.5%;
+    margin: 0 auto;
+  }
+
+  .reveal div {
+    width: 100%;
+    padding-top: 66.66%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .reveal img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .reveal h3 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .reveal p {
+    padding: 2% 5%;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  li.selected {
+    background: #FFD800;
+    color: #FFFFFF;
+    border: 2px solid #FFD800;
+  }
+
+  .alert {
+    font-size: 1.4rem;
+    color: red;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .main-container .main> :not(.toolbar-container) {
+      box-sizing: border-box;
+      max-width: 1200px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+
+    .app {
+      width: 95%;
+      padding: 60px 0;
+    }
+
+    .question li {
+      font-size: 1rem;
+    }
+
+    .question h2 {
+      padding: 0px 6%;
+      line-height: 1.3;
+    }
+
+    .question {
+      padding: 0 5%
+    }
+  }
+</style>
+
+<div class="app-wrapper">
+  <div class="app">
+    <button onclick="submit()">submit!</button>
+    <!-- <div class="reveal">
+      <img src="https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg">
+      <h3>you got: Megan!</h3>
+      <p>You come across as shy and quiet, but you definitely have hidden depths. You love to have fun, and can’t say no to
+        a night out. You are a stone-cold fox, and men drop at your feet (we’re not jealous babe, honest). You know exactly
+        what you’re looking for in a guy, and you’ll do anything to make sure you get what you want.</p>
+    </div> -->
+  </div>
+</div>
+
+
+<script>
+  var questions = [{
+    question: "You want a guy who's 100% your type on paper. How would you describe your dream man?",
+    answers: {
+      Samira: "Safe, dependable (and maybe a tiny bit boring)",
+      Dani: "Funny AF, so basically the double of you…",
+      Laura: "Younger, cause there's nothing wrong with a bit of cougar action",
+      Megan: "Someone spritual, because you're dead deep",
+      Georgia: "Literally anyone (you're not picky)"
+    }
+  },
+  {
+    question: "You've worked hard all week, so it's time for a BNO with your BFFs. How do you spend your night?",
+    answers: {
+      Samira: "Like a meercat scouting around the club looking for a man",
+      Dani: "Dancing the night away with your favourite gals",
+      Laura: "Holding a girl's hair back while she's being sick",
+      Megan: "Giving guys the dead eye",
+      Georgia: "Running around the dancefloor in circles until you're worn out"
+    }
+  },
+  {
+    question: "You're grafting a guy. What's your go-to pulling technique?",
+    answers: {
+      Samira: "You move for no man, so you wait for him to come to you",
+      Dani: "Mates before dates, so you make friends with him",
+      Laura: "Basically look like an absolute sort the whole time to catch his eye",
+      Megan: "Keep him on his toes so he never really knows what's going on",
+      Georgia: "Act like your usual wacky self and you're sure you'll get his attention"
+    }
+  },
+  {
+    question: "What's sure to give you the ick in a relationship?",
+    answers: {
+      Samira: "Someone who stands up to you, because you know you're always right",
+      Dani: "Cheating is unforgivable, so you could never get past it",
+      Laura: "You love affection, so if he's off with you he's out the door",
+      Megan: "Somebody who always has to be the centre of attention",
+      Georgia: "A guy who is too quiet and doesn't like to have fun"
+    }
+  },
+  {
+    question: "Why would a guy choose your basket to put all his eggs in?",
+    answers: {
+      Samira: "You're super loyal and back your friends to the end",
+      Dani: "Because of your personality… You're generally just pure and cute",
+      Laura: "You're motherly, and always look after everybody around you",
+      Megan: "You're drop dead gorgeous obviously. How could a guy resist your curves?",
+      Georgia: "Life with you is never boring because your always up for a laugh"
+    }
+  },
+  {
+    question: "You've met the man of your dreams. What first date would have you buzzin'?",
+    answers: {
+      Samira: "A cutesie meal followed by a show on the West End",
+      Dani: "Nothing beats a drink down your local pub",
+      Laura: "Something classy like cocktails or a fancy meal at a posh restaurant",
+      Megan: "Working on those vibes while winding and grinding in the club",
+      Georgia: "A day filled with bantz and laughs somewhere fun like the zoo"
+    }
+  }]
+
+  var results = {
+    Samira: {
+      image: "https://media.missguided.co.uk/image/upload/v1528128682/samira_sx6vh5.jpg",
+      content: "You’re a fierce, sassy, and cutesie (obvs). You are loyal to your mates, and they always come to you because you give the best advice. You aren’t afraid to tell the truth, even if it hurts, and your straight talking can get you in to trouble. When it comes to guys, you know what you want, and you don’t mind waiting to find the one.",
+    },
+    Dani: {
+      image: "https://media.missguided.co.uk/image/upload/v1528128679/dani_af9xdg.jpg",
+      content: "You're funny, sweet, and little bit mad (in a cute way, obvs). You tend to get along with everybody, are a firm believer in girl code, and put your friendships above everything else. You are incredibly loyal, so when you meet a guy who’s your type on paper you’ll stick by his side through thick and thin.",
+    },
+    Laura: {
+      image: "https://media.missguided.co.uk/image/upload/v1528128678/laura_alwc9q.jpg",
+      content: "You’re mature, funny, and sweet. You are always there for your mates , and people come to you for support when they’re feeling emosh. You can be insecure, but you really don’t need to be because you’re an absolute sort babe. You don’t always pick the right men, but when you find the one you’ll stick with them through it all.",
+    },
+    Megan: {
+      image: "https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg",
+      content: "You come across as shy and quiet, but you definitely have hidden depths. You love to have fun, and can’t say no to a night out. You are a stone-cold fox, and men drop at your feet (we’re not jealous babe, honest). You know exactly what you’re looking for in a guy, and you’ll do anything to make sure you get what you want.",
+    },
+    Georgia: {
+      image: "https://media.missguided.co.uk/image/upload/v1530868646/GEORGIA_lthlw7.jpg",
+      content: "You’re nuts but everybody loves you. Without your crazy ways, life would be very boring. You’re very loyal to your mates, and give great pep talks when they’re feeling less than confident. You need a guy who won’t roll his eyes when you’re being loud and erratic, but will jump in that pool right beside you."
+    }
+  };
+
+  var gifArr = ["https://media.giphy.com/media/5jYpsRUev77tcKgse8/giphy.gif", "https://media.giphy.com/media/9D5b26YO2TLCqiYtfX/giphy.gif", "https://media.giphy.com/media/1wozAl10PBKb61MP1b/giphy.gif", "https://media.giphy.com/media/jTGWc81BiQxkfetlUc/giphy.gif", "https://media.giphy.com/media/5brXDDoPlCwues1EKH/giphy.gif", "https://media.giphy.com/media/B0XHCLxEq6XkKNHjhy/giphy.gif"]
+
+  let template = (x, i) => {
+    console.log(x);
+    return `
+<div class="question">
+  <h2>${i + 1}. ${x.question}</h2>
+  ${Object.values(x.answers).map(answer =>
+        `<li>${answer}</li>`
+      ).join('')
+      }
+    <img src="${gifArr[i]}">
+</div >
+
+`
+  }
+
+  questions.forEach((x, i) => {
+    document.querySelector(".app button").insertAdjacentHTML('beforebegin', template(x, i));
+  })
+
+  document.querySelectorAll('li').forEach(x => {
+    x.addEventListener('click', el => {
+      el = el.target;
+      let parent = el.parentElement;
+      parent.querySelector(".selected") ?
+        (parent.querySelector('.selected').classList.remove('selected'),
+          el.classList.add("selected"))
+        : el.classList.add("selected");
+    })
+  })
+
+  let alert = () => `
+<div class="alert">
+  <p>Please select an answer for each question</p>
+</div>
+  `
+
+  var submit = () => {
+    console.log("clicked");
+
+    let selected = document.getElementsByClassName('selected');
+    console.log(selected);
+    if (questions.length !== selected.length) {
+      document.querySelector(".app button").insertAdjacentHTML('afterend', alert());
+      setTimeout(function () {
+        document.querySelector(".alert").remove()
+      }, 3000);
+    } else {
+
+      if (document.querySelector('.reveal')) document.querySelector('.reveal').remove();
+
+      let arr = [];
+
+      Array.from(selected).forEach((x, i) => {
+        let object = questions[i].answers;
+        let value = x.textContent;
+        let contestant = Object.keys(object).find(key => object[key] === value);
+        arr.push(contestant);
+      })
+
+      console.log(arr);
+
+      function mode(arr) {
+        return arr.sort((a, b) =>
+          arr.filter(v => v === a).length
+          - arr.filter(v => v === b).length
+        ).pop();
+      }
+
+      console.log(results[mode(arr)]);
+      var name = mode(arr)
+      var quizAnswer = results[name]
+
+
+
+      let reveal = () => {
+        return `
+        <div class="reveal">
+          <div>
+            <img src="${quizAnswer.image}"/>
+          </div>
+          <h3>you got: ${name}!</h3>
+          <p>${quizAnswer.content}</p>
+        </div>
+        `
+      }
+
+      console.log(reveal());
+      document.querySelector(".app").insertAdjacentHTML('beforeend', reveal())
+      console.log(document.querySelector('.reveal').getBoundingClientRect())
+      let scrollValue = document.querySelector('.reveal').scrollIntoView(true)
+    }
+  }
+
+
+</script>

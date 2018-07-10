@@ -1,0 +1,366 @@
+<style>
+/* Campaign */
+/*preloader*/
+.js div#preloader {
+	position: fixed;
+	z-index: 141;
+	top: 0;
+	left: 0;
+	overflow: visible;
+	width: 100%;
+	height: 100%;
+	background: url(https://media.missguided.co.uk/image/upload/v1482240298/Gif_jnmdrb.gif) center center no-repeat #000;
+}
+#preloader h4 {
+	position: absolute;
+	top: 55%;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+/*reset*/
+.main-container, .top-promos-wrapper {
+	max-width: 2500px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+.main {
+	padding-top: 0;
+}
+.breadcrumbs, .top-promos-wrapper {
+	display: none;
+}
+.container {
+	width: 100%;
+}
+
+.row {
+	padding-bottom: 10vh;
+	position: relative;
+	display: block;
+}
+.row.spacer {
+	margin-top: 5vh;
+}
+.parallax-window {
+	min-height: 95vh;
+	background: transparent;
+}
+.fullImg {
+	width: 100vw;
+}
+svg#PL {
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	padding: 1em;
+	color: white;
+	position: absolute;
+	top: 33%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	width: 50vw;
+}
+.chevy {
+	font-size: calc(2vw + 2vh + 4vmin);
+	text-align: center;
+	margin: 0;
+	padding: 1em;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+}
+
+
+
+
+
+
+
+
+video::-webkit-media-controls, .breadcrumbs, .top-promos-wrapper {
+ display: none!important;
+}
+/*text*/
+h1, h2, h3, h4, h5, h6 {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-font-smoothing: antialiased;
+}
+a, a:active, a:focus, a:hover {
+	text-decoration: none;
+}
+.capz {
+	text-transform: uppercase;
+}
+.longword {
+	word-wrap: break-word;
+}
+.row {
+	width: 90vw;
+	margin: 5% 5vw;
+	padding: 5vh 0;
+}
+.row.first {
+	width: 100vw;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.bv-video-wrap {
+	display: none;
+	width: 100%;
+	height: 100%;
+	height: 80vh!important;
+}
+.bv-video-wrap--ready {
+	display: block;
+}
+.bv-video-wrap::before {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	content: '';
+	background: 0 0;
+}
+.bv-video {
+	width: 100%;
+	height: 100%;
+	min-height: 80vh;
+}
+.buttonContainer, .row h2, .row h4 {
+	text-align: center;
+}
+.button {
+	margin-top: 3em;
+}
+.more-buttons {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 2em;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+.more-buttons .button {
+	margin: 1em 1em 0;
+}
+.imgContainer img, .imgContainer video {
+	width: 100%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	user-drag: none;
+	-webkit-user-drag: none;
+}
+.row video {
+	width: 100%;
+	height: auto;
+}
+.std {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: column nowrap;
+	-webkit-flex-flow: column nowrap;
+	align-items: stretch;
+	align-content: space-around;
+}
+.row {
+	position: relative;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding-bottom: 10vh;
+}
+.row.fullwidth {
+	overflow: hidden;
+	width: 100%;
+	max-width: 3000px;
+}
+.row.lookbook {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 5%;
+}
+.imgContainer.a1 {
+	margin: 0 0 0 30%;
+}
+.price-strip {
+	font-weight: 700;
+	display: -webkit-flex;
+	margin-top: 1em;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+}
+.price-strip.col {
+	flex-direction: column;
+}
+.price-strip.right {
+	align-items: flex-end;
+}
+.price-strip.right p {
+	margin-right: 1em;
+}
+.price-strip.left {
+	justify-content: flex-start;
+}
+.price-strip.left.col {
+	flex-direction: column;
+	align-items: flex-start;
+}
+.price-strip.right.col {
+	flex-direction: column;
+	align-items: flex-end;
+}
+.price-strip.left p {
+	margin-left: 1em;
+}
+.buttonContainer {
+	width: 100vw;
+	margin-bottom: 5%;
+}
+.come-in {
+	-webkit-animation: come-in 1.2s ease forwards;
+	-ms-animation: come-in 1.2s ease forwards;
+	animation: come-in 1.2s ease forwards;
+}
+.come-in:nth-child(odd) {
+	-webkit-transform: translateY(300px);
+	-ms-transform: translateY(300px);
+	transform: translateY(300px);
+	-webkit-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+}
+.come-in.across {
+	-webkit-transform: translateX(300px);
+	-ms-transform: translateX(300px);
+	transform: translateX(300px);
+	-webkit-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+}
+.come-in.across:nth-child(odd) {
+	-webkit-transform: translateX(-300px);
+	-ms-transform: translateX(-300px);
+	transform: translateX(-300px);
+	-webkit-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-duration: 2s;
+}
+.already-visible {
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-animation: none;
+	-ms-animation: none;
+	animation: none;
+}
+.hello {
+	opacity: 0;
+}
+@keyframes come-in {
+ to {
+ -webkit-transform: translateY(0);
+ -ms-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+}
+@-webkit-keyframes come-in {
+ to {
+ -webkit-transform: translateY(0);
+ -ms-transform: translateY(0);
+ transform: translateY(0);
+ opacity: 1;
+}
+}
+
+@media only screen and (width :768px) {
+}
+
+@media only screen and (max-width :767px) {
+.main-container .main > :not(.toolbar-container) {
+	padding-right: 0;
+	padding-left: 0;
+}
+.videoContainer {
+	width: 100%;
+	margin: 0 auto;
+}
+.price-strip,  .price-strip.col,  .price-strip.left,  .price-strip.right,  .price-strip.rightside {
+	display: -webkit-flex;
+	width: 100%;
+	margin-top: 1em;
+	justify-content: space-around;
+	-webkit-justify-content: space-around;
+}
+.price-strip.right p {
+	margin-left: 0;
+}
+.price-strip.left p {
+	margin-right: 0;
+}
+.price-strip.col-on-mob {
+	flex-direction: column;
+}
+}
+
+/* include via layout xml */
+/*<reference name="head">
+    <block type="core/text" name="externalCss">
+        <action method="setText">
+            <text><![CDATA[<link rel="stylesheet" type="text/css" href="//static.missguided.co.uk/media/upload/HOMEPAGE/style.css">]]>
+            </text>
+        </action>
+    </block>
+</reference>*/
+</style>
+
+<div class="row">
+  <div class="parallax-window" data-parallax="scroll" width="auto" data-src="https://media.missguided.co.uk/image/upload/q_70,w_1800,dpr_1.0,f_auto/v1478166161/B00A02672_agdlm6.jpg" data-image-src="https://media.missguided.co.uk/image/upload/q_70,w_1800,dpr_1.0,f_auto/v1478166161/B00A02672_agdlm6.jpg">
+    <svg id="PL" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2327.14 233.09">
+      <defs>
+        <style>
+.cls-1{fill:#fff;}
+</style>
+      </defs>
+      <title>Logo-Peace_and_Love</title>
+      <path class="cls-1" d="M472.17,929.91q-7.74,16.08-21.43,24.41a59.71,59.71,0,0,1-22.33,8q-12.8,2.09-36.91,2.08H378.1v85.73H336.43V824.83H392.1q22.33,0,35.13,2.38a71.21,71.21,0,0,1,22.62,8,59,59,0,0,1,22.33,24.41q8,15.18,8,34.83A78.08,78.08,0,0,1,472.17,929.91Zm-45-58.94q-11-6.25-35.13-6.25h-14v59.83h12.2q28,0,37.81-7.44,10.12-7.44,10.12-22Q438.24,877.22,427.22,871Zm107.26,179.2V824.83H655.34v39.89H576.16V918h75.91v39.89H576.16v52.39h79.18v39.89H534.48Zm347.43,0q-18.16-43.76-24.11-58.35H777.73l-25,58.35H706.58q70.55-169.08,94.07-225.35h32.75q70.84,169.09,94.66,225.35H881.91ZM817,883.77q-18.16,51.2-24.11,68.17h48.22Q823,900.74,817,883.77Zm316.82,152.41q-28,17.86-62.51,17.86-32.15,0-58.64-15.18a115.89,115.89,0,0,1-42.27-40.19,128.36,128.36,0,0,1-13.1-29.17,119.66,119.66,0,0,1-4.46-32.75A112,112,0,0,1,968,879.6a116.41,116.41,0,0,1,39.59-41.38,130.45,130.45,0,0,1,28.88-12.8,115.39,115.39,0,0,1,32.15-4.47q34.83,0,63.11,17.86,28.58,18.16,43.46,50.61h-46.44q-11.61-14.88-25.6-21.43-14-6.84-33.64-6.85-32.15,0-53.58,22-21.14,22-21.14,53.88a77.58,77.58,0,0,0,3,21.43,77.8,77.8,0,0,0,35.42,45.25,71.27,71.27,0,0,0,37.21,10.12q16.37,0,29.17-6,12.8-6.25,26.49-20.54h49.12A104.65,104.65,0,0,1,1133.84,1036.18Zm98.95,14V824.83h120.86v39.89h-79.18V918h75.91v39.89h-75.91v52.39h79.18v39.89H1232.79Zm629.78,0V824.83h41.68v185.46H1973v39.89H1862.56Zm383.24-79.78a119.77,119.77,0,0,1-12.5,29.17,113.93,113.93,0,0,1-41.08,39.59q-26.2,14.89-58,14.88-32.15,0-58.64-14.88a113.52,113.52,0,0,1-42.27-39.89,122.51,122.51,0,0,1-13.1-28.87,119.67,119.67,0,0,1-4.46-32.75q0-32.15,15.18-58.35a114.73,114.73,0,0,1,40.48-41.08,112.47,112.47,0,0,1,29.47-12.8,125.1,125.1,0,0,1,33.64-4.47q31.55,0,57.45,15.18A116.43,116.43,0,0,1,2233,876a114.53,114.53,0,0,1,12.8,28.88,116.48,116.48,0,0,1,4.47,32.45A120.72,120.72,0,0,1,2245.8,970.39Zm-47-70.55a74.88,74.88,0,0,0-25.3-27.39,77.51,77.51,0,0,0-18.46-8.33,74.65,74.65,0,0,0-21.13-3q-32.45,0-54.18,22-22,21.73-22,54.48A77.55,77.55,0,0,0,2069,978.13a76,76,0,0,0,64.89,35.72q32.15,0,53.29-21.73t21.13-54.18Q2208.29,916.81,2198.77,899.84Zm204.62,150.33h-34.23q-65.79-169.08-87.82-225.35h44.06q45.24,128.6,60.43,171.46l60.73-171.46h44.06Q2425.11,993.91,2403.38,1050.17Zm139.33,0V824.83h120.86v39.89h-79.18V918h75.91v39.89h-75.91v52.39h79.18v39.89H2542.71Z" transform="translate(-336.43 -820.96)"/>
+      <polygon class="cls-1" points="1290.81 135.68 1290.81 191.56 1252.84 191.56 1252.84 135.68 1196.66 135.68 1196.66 97.41 1252.84 97.41 1252.84 41.53 1290.81 41.53 1290.81 97.41 1346.69 97.41 1346.69 135.68 1290.81 135.68"/>
+    </svg>
+    <a class="chevy" href="#"  onclick="scrollWin();" > <i class="fa fa-angle-down" aria-hidden="true"></i></a> </div>
+  <div class="topCopy" id="scrollToHere" style="text-transform:none;">
+    <h4> Introducing the AW16 Peace + Love collection.  This season, the range is even more luxurious and comes in the form of timeless structured ready-to-wear pieces. Each style has been exclusively designed with the strong, confident female in mind, experimenting with opulent fabrics, stand-out detailing and intricate hand embellishments.  It is the ultimate capsule collection for the trailblazers who work hard and live fast.  This is next level premium.</h4>
+    <div style="text-align:center;"> <a href="/clothing/category/peace-love">
+      <p>
+        <button class="button button--alt">shop peace + love</button>
+      </p>
+      </a> </div>
+    <a href="/clothing/category/peace-love"> </a></div>
+</div>
