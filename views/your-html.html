@@ -19,10 +19,15 @@
     width: 70%;
     max-width: 800px;
     margin: 0 auto;
-    padding-top: 60px;
+    /* padding-top: 60px; */
     position: relative;
     background: #ff72a4;
-    padding: 8%;
+    /* padding: 8%; */
+  }
+
+  .app>img {
+    width: 100%;
+    margin-bottom: 60px;
   }
 
   .app button {
@@ -41,6 +46,7 @@
 
   .question {
     position: relative;
+    padding: 0 10%;
   }
 
   .question h2 {
@@ -69,24 +75,56 @@
     right: 0;
   }
 
-  .app:nth-child(even) img {
-    top: 0;
-    left: 0;
+  .question:nth-child(2n) img {
+    top: -100px;
+    right: -200px;
+    transform: rotate(15deg)
   }
 
-  .app:nth-child(odd) img {
-    top: 0;
-    right: 0;
-  }
-
-
-  /* .question img:nth-of-type(2n) {
-    top: 0;
-    right: 0;
+  /* .question:nth-child(1) img {
+    top: -100px;
+    left: -190px;
   } */
 
+  .question:nth-child(2) img {
+    top: -80px;
+    left: -110px;
+    transform: rotate(-5deg)
+  }
+
+  .question:nth-child(3) img {
+    top: -130px;
+    right: -100px;
+    transform: rotate(15deg)
+  }
+
+  .question:nth-child(4) img {
+    top: -100px;
+    left: -70px;
+    width: 160px;
+    transform: rotate(-15deg)
+  }
+
+  .question:nth-child(5) img {
+    top: -70px;
+    right: -60px;
+    transform: rotate(35deg)
+  }
+
+  .question:nth-child(6) img {
+    top: -140px;
+    left: -120px;
+    transform: rotate(-15deg)
+  }
+
+  .question:nth-child(7) img {
+    top: -100px;
+    right: -110px;
+    transform: rotate(15deg)
+  }
+
   .question li:last-of-type {
-    margin-bottom: 50px;
+    margin-bottom: 120px;
   }
 
   .reveal {
@@ -168,6 +206,7 @@
 
 <div class="app-wrapper">
   <div class="app">
+    <img src="https://media.missguided.co.uk/image/upload/v1531239991/header_n717os.jpg" alt="">
     <button onclick="submit()">submit!</button>
     <!-- <div class="reveal">
       <img src="https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg">
@@ -189,7 +228,8 @@
       Laura: "Younger, cause there's nothing wrong with a bit of cougar action",
       Megan: "Someone spritual, because you're dead deep",
       Georgia: "Literally anyone (you're not picky)"
-    }
+    },
+    gif: "https://media.giphy.com/media/5jYpsRUev77tcKgse8/giphy.gif"
   },
   {
     question: "You've worked hard all week, so it's time for a BNO with your BFFs. How do you spend your night?",
@@ -199,7 +239,8 @@
       Laura: "Holding a girl's hair back while she's being sick",
       Megan: "Giving guys the dead eye",
       Georgia: "Running around the dancefloor in circles until you're worn out"
-    }
+    },
+    gif: "https://media.giphy.com/media/9D5b26YO2TLCqiYtfX/giphy.gif"
   },
   {
     question: "You're grafting a guy. What's your go-to pulling technique?",
@@ -209,7 +250,8 @@
       Laura: "Basically look like an absolute sort the whole time to catch his eye",
       Megan: "Keep him on his toes so he never really knows what's going on",
       Georgia: "Act like your usual wacky self and you're sure you'll get his attention"
-    }
+    },
+    gif: "https://media.giphy.com/media/1wozAl10PBKb61MP1b/giphy.gif"
   },
   {
     question: "What's sure to give you the ick in a relationship?",
@@ -219,7 +261,8 @@
       Laura: "You love affection, so if he's off with you he's out the door",
       Megan: "Somebody who always has to be the centre of attention",
       Georgia: "A guy who is too quiet and doesn't like to have fun"
-    }
+    },
+    gif: "https://media.giphy.com/media/9uJ47iZK4DRKqkLlHz/giphy.gif"
   },
   {
     question: "Why would a guy choose your basket to put all his eggs in?",
@@ -229,7 +272,8 @@
       Laura: "You're motherly, and always look after everybody around you",
       Megan: "You're drop dead gorgeous obviously. How could a guy resist your curves?",
       Georgia: "Life with you is never boring because your always up for a laugh"
-    }
+    },
+    gif: "https://media.giphy.com/media/5brXDDoPlCwues1EKH/giphy.gif"
   },
   {
     question: "You've met the man of your dreams. What first date would have you buzzin'?",
@@ -239,33 +283,37 @@
       Laura: "Something classy like cocktails or a fancy meal at a posh restaurant",
       Megan: "Working on those vibes while winding and grinding in the club",
       Georgia: "A day filled with bantz and laughs somewhere fun like the zoo"
-    }
+    },
+    gif: "https://media.giphy.com/media/B0XHCLxEq6XkKNHjhy/giphy.gif"
   }]
 
   var results = {
     Samira: {
       image: "https://media.missguided.co.uk/image/upload/v1528128682/samira_sx6vh5.jpg",
       content: "You’re a fierce, sassy, and cutesie (obvs). You are loyal to your mates, and they always come to you because you give the best advice. You aren’t afraid to tell the truth, even if it hurts, and your straight talking can get you in to trouble. When it comes to guys, you know what you want, and you don’t mind waiting to find the one.",
+      link: "https://blog.missguided.co.uk/love-island/samira-love-island-outfits/"
     },
     Dani: {
       image: "https://media.missguided.co.uk/image/upload/v1528128679/dani_af9xdg.jpg",
       content: "You're funny, sweet, and little bit mad (in a cute way, obvs). You tend to get along with everybody, are a firm believer in girl code, and put your friendships above everything else. You are incredibly loyal, so when you meet a guy who’s your type on paper you’ll stick by his side through thick and thin.",
+      link: "https://blog.missguided.co.uk/love-island/dani-love-island-outfits/"
     },
     Laura: {
       image: "https://media.missguided.co.uk/image/upload/v1528128678/laura_alwc9q.jpg",
       content: "You’re mature, funny, and sweet. You are always there for your mates , and people come to you for support when they’re feeling emosh. You can be insecure, but you really don’t need to be because you’re an absolute sort babe. You don’t always pick the right men, but when you find the one you’ll stick with them through it all.",
+      link: "https://blog.missguided.co.uk/love-island/laura-love-island-outfits/"
     },
     Megan: {
       image: "https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg",
       content: "You come across as shy and quiet, but you definitely have hidden depths. You love to have fun, and can’t say no to a night out. You are a stone-cold fox, and men drop at your feet (we’re not jealous babe, honest). You know exactly what you’re looking for in a guy, and you’ll do anything to make sure you get what you want.",
+      link: "https://blog.missguided.co.uk/love-island/megan-love-island-outfits/"
     },
     Georgia: {
       image: "https://media.missguided.co.uk/image/upload/v1530868646/GEORGIA_lthlw7.jpg",
-      content: "You’re nuts but everybody loves you. Without your crazy ways, life would be very boring. You’re very loyal to your mates, and give great pep talks when they’re feeling less than confident. You need a guy who won’t roll his eyes when you’re being loud and erratic, but will jump in that pool right beside you."
+      content: "You’re nuts but everybody loves you. Without your crazy ways, life would be very boring. You’re very loyal to your mates, and give great pep talks when they’re feeling less than confident. You need a guy who won’t roll his eyes when you’re being loud and erratic, but will jump in that pool right beside you.",
+      link: "https://blog.missguided.co.uk/love-island/georgia-love-island-outfits/"
     }
   };
-
-  var gifArr = ["https://media.giphy.com/media/5jYpsRUev77tcKgse8/giphy.gif", "https://media.giphy.com/media/9D5b26YO2TLCqiYtfX/giphy.gif", "https://media.giphy.com/media/1wozAl10PBKb61MP1b/giphy.gif", "https://media.giphy.com/media/jTGWc81BiQxkfetlUc/giphy.gif", "https://media.giphy.com/media/5brXDDoPlCwues1EKH/giphy.gif", "https://media.giphy.com/media/B0XHCLxEq6XkKNHjhy/giphy.gif"]
 
   let template = (x, i) => {
     console.log(x);
@@ -276,9 +324,8 @@
         `<li>${answer}</li>`
       ).join('')
       }
-    <img src="${gifArr[i]}">
+    <img src="${x.gif}">
 </div >
-
 `
   }
 
@@ -339,8 +386,6 @@
       var name = mode(arr)
       var quizAnswer = results[name]
 
-
-
       let reveal = () => {
         return `
         <div class="reveal">
@@ -349,11 +394,13 @@
           </div>
           <h3>you got: ${name}!</h3>
           <p>${quizAnswer.content}</p>
+          <a href="${quizAnswer.link}">
+            <button>shop ${name}'s look</button>
+          </a>
         </div>
         `
       }
 
-      console.log(reveal());
       document.querySelector(".app").insertAdjacentHTML('beforeend', reveal())
       console.log(document.querySelector('.reveal').getBoundingClientRect())
       let scrollValue = document.querySelector('.reveal').scrollIntoView(true)
