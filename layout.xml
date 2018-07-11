@@ -1,0 +1,8 @@
+<reference name="head">
+        <block type="core/text" name="OG">
+        <action method="setText">
+            <text><![CDATA[<meta property="fb:app_id" content="2170240653212782" /><meta property="og:type" content="article" /><meta property="og:url" content="http://missguided.co.uk/quiz-test" /><meta property="og:title" content="I just did the Love Island Quiz, and apparently I am..." /><meta property="og:image" content="https://media.missguided.co.uk/image/upload/v1530877856/love-island-style4_qajw9x.jpg"/><meta property="og:description" content="Which Love Islander are you?" />]]>
+            </text>
+        </action>
+    </block>
+</reference>
