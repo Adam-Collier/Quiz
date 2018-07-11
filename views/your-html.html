@@ -22,7 +22,7 @@
     /* padding-top: 60px; */
     position: relative;
     background: #ff72a4;
-    /* padding: 8%; */
+    padding: 0 0 50px 0;
   }
 
   .app>img {
@@ -34,12 +34,11 @@
     background: #ffd800;
     color: #ff72a4;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 10px 30px;
     text-align: center;
     margin: 0 auto;
     display: block;
-    margin-bottom: 60px;
     -webkit-appearance: none;
     border: none;
   }
@@ -74,17 +73,6 @@
     top: 0;
     right: 0;
   }
-
-  .question:nth-child(2n) img {
-    top: -100px;
-    right: -200px;
-    transform: rotate(15deg)
-  }
-
-  /* .question:nth-child(1) img {
-    top: -100px;
-    left: -190px;
-  } */
 
   .question:nth-child(2) img {
     top: -80px;
@@ -127,20 +115,31 @@
     margin-bottom: 120px;
   }
 
+  .question:nth-of-type(6) li:last-of-type {
+    margin-bottom: 50px;
+  }
+
   .reveal {
-    background: #ff72a4;
+    background: #ffa4c5;
     max-width: 700px;
-    padding: 20px 20px;
+    padding: 20px 20px 30px 0;
     color: #ffd800;
     border-radius: 0.5%;
     margin: 0 auto;
+    margin-top: 50px;
   }
 
-  .reveal div {
+  .reveal div:nth-of-type(1) {
     width: 100%;
-    padding-top: 66.66%;
+    padding-top: 109.7%;
     position: relative;
-    margin-bottom: 20px;
+  }
+
+  .reveal div:nth-of-type(2) {
+    background: #ff72a4;
+    width: 92%;
+    margin: 0 auto;
+    padding: 3% 1% 5% 1%;
   }
 
   .reveal img {
@@ -161,6 +160,10 @@
     padding: 2% 5%;
     font-size: 1rem;
     font-weight: 700;
+  }
+
+  .reveal a {
+    text-decoration: none;
   }
 
   li.selected {
@@ -189,6 +192,10 @@
       padding: 60px 0;
     }
 
+    .question img {
+      display: none;
+    }
+
     .question li {
       font-size: 1rem;
     }
@@ -209,11 +216,17 @@
     <img src="https://media.missguided.co.uk/image/upload/v1531239991/header_n717os.jpg" alt="">
     <button onclick="submit()">submit!</button>
     <!-- <div class="reveal">
-      <img src="https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg">
-      <h3>you got: Megan!</h3>
-      <p>You come across as shy and quiet, but you definitely have hidden depths. You love to have fun, and can’t say no to
-        a night out. You are a stone-cold fox, and men drop at your feet (we’re not jealous babe, honest). You know exactly
-        what you’re looking for in a guy, and you’ll do anything to make sure you get what you want.</p>
+      <div>
+        <img src="https://media.missguided.co.uk/image/upload/v1531308226/Laura_grgkqz.jpg">
+      </div>
+      <div>
+        <p>You’re mature, funny, and sweet. You are always there for your mates , and people come to you for support when they’re
+          feeling emosh. You can be insecure, but you really don’t need to be because you’re an absolute sort babe. You don’t
+          always pick the right men, but when you find the one you’ll stick with them through it all.</p>
+        <a href="https://blog.missguided.co.uk/love-island/laura-love-island-outfits/">
+          <button>shop Laura's look</button>
+        </a>
+      </div>
     </div> -->
   </div>
 </div>
@@ -289,27 +302,27 @@
 
   var results = {
     Samira: {
-      image: "https://media.missguided.co.uk/image/upload/v1528128682/samira_sx6vh5.jpg",
+      image: "https://media.missguided.co.uk/image/upload/v1531308226/Samira_jut70p.jpg",
       content: "You’re a fierce, sassy, and cutesie (obvs). You are loyal to your mates, and they always come to you because you give the best advice. You aren’t afraid to tell the truth, even if it hurts, and your straight talking can get you in to trouble. When it comes to guys, you know what you want, and you don’t mind waiting to find the one.",
       link: "https://blog.missguided.co.uk/love-island/samira-love-island-outfits/"
     },
     Dani: {
-      image: "https://media.missguided.co.uk/image/upload/v1528128679/dani_af9xdg.jpg",
+      image: "https://media.missguided.co.uk/image/upload/v1531308226/Dani_cxwrqd.jpg",
       content: "You're funny, sweet, and little bit mad (in a cute way, obvs). You tend to get along with everybody, are a firm believer in girl code, and put your friendships above everything else. You are incredibly loyal, so when you meet a guy who’s your type on paper you’ll stick by his side through thick and thin.",
       link: "https://blog.missguided.co.uk/love-island/dani-love-island-outfits/"
     },
     Laura: {
-      image: "https://media.missguided.co.uk/image/upload/v1528128678/laura_alwc9q.jpg",
+      image: "https://media.missguided.co.uk/image/upload/v1531308226/Laura_grgkqz.jpg",
       content: "You’re mature, funny, and sweet. You are always there for your mates , and people come to you for support when they’re feeling emosh. You can be insecure, but you really don’t need to be because you’re an absolute sort babe. You don’t always pick the right men, but when you find the one you’ll stick with them through it all.",
       link: "https://blog.missguided.co.uk/love-island/laura-love-island-outfits/"
     },
     Megan: {
-      image: "https://media.missguided.co.uk/image/upload/v1530868569/MEGAN_lmcsvl.jpg",
+      image: "https://media.missguided.co.uk/image/upload/v1531308226/Megan_y5x2qx.jpg",
       content: "You come across as shy and quiet, but you definitely have hidden depths. You love to have fun, and can’t say no to a night out. You are a stone-cold fox, and men drop at your feet (we’re not jealous babe, honest). You know exactly what you’re looking for in a guy, and you’ll do anything to make sure you get what you want.",
       link: "https://blog.missguided.co.uk/love-island/megan-love-island-outfits/"
     },
     Georgia: {
-      image: "https://media.missguided.co.uk/image/upload/v1530868646/GEORGIA_lthlw7.jpg",
+      image: "https://media.missguided.co.uk/image/upload/v1531308226/Georgia_isjnrb.jpg",
       content: "You’re nuts but everybody loves you. Without your crazy ways, life would be very boring. You’re very loyal to your mates, and give great pep talks when they’re feeling less than confident. You need a guy who won’t roll his eyes when you’re being loud and erratic, but will jump in that pool right beside you.",
       link: "https://blog.missguided.co.uk/love-island/georgia-love-island-outfits/"
     }
@@ -392,11 +405,12 @@
           <div>
             <img src="${quizAnswer.image}"/>
           </div>
-          <h3>you got: ${name}!</h3>
-          <p>${quizAnswer.content}</p>
-          <a href="${quizAnswer.link}">
-            <button>shop ${name}'s look</button>
-          </a>
+          <div>
+            <p>${quizAnswer.content}</p>
+            <a href="${quizAnswer.link}">
+              <button>shop ${name}'s look</button>
+            </a>
+          </div>
         </div>
         `
       }
