@@ -11,6 +11,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://static.missguided.co.uk/media/upload/q_70/q_70,w_1000/js/backgroundVideo.js"></script>
     <meta charset="utf-8">
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '2170240653212782',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.7'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk')); 
+    </script>
+
+    <!-- fb open graph -->
+    <!-- to be inserted by layout xml -->
+    <meta property="fb:app_id" content="2170240653212782" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://missguided.co.uk/quiz-test" />
+    <meta property="og:title" content="The Love Island Quiz" />
+    <meta property="og:image" content="https://media.missguided.co.uk/image/upload/v1530877856/love-island-style4_qajw9x.jpg"
+    />
+    <meta property="og:description" content="Which Love Islander are you?" />
+
 </head>
 <!-- End of Base Styles -->
 <!-- Include header.html -->
